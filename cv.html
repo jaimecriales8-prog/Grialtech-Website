@@ -1,0 +1,674 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Jaime Criales Henao — Perfil Ejecutivo</title>
+<meta name="robots" content="noindex, nofollow" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --navy:    #0d1f35;
+    --navy-2:  #162d47;
+    --gold:    #b8935a;
+    --gold-lt: #d4ae7a;
+    --text:    #1a1a2e;
+    --muted:   #5a6478;
+    --light:   #f7f8fa;
+    --border:  #e4e8ef;
+    --white:   #ffffff;
+  }
+
+  html { scroll-behavior: smooth; color-scheme: light only; }
+
+  body {
+    font-family: 'Inter', sans-serif;
+    background: var(--light);
+    color: var(--text);
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  /* ── HEADER ── */
+  .cv-header {
+    background: linear-gradient(135deg, var(--navy) 0%, var(--navy-2) 100%);
+    color: #fff;
+    padding: 56px 40px 48px;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .cv-header::before {
+    content: '';
+    position: absolute; top: 0; right: 0;
+    width: 340px; height: 340px;
+    background: radial-gradient(circle, rgba(184,147,90,0.18) 0%, transparent 70%);
+    border-radius: 50%;
+    transform: translate(30%, -30%);
+  }
+
+  .cv-header::after {
+    content: '';
+    position: absolute; bottom: 0; left: 0;
+    width: 200px; height: 200px;
+    background: radial-gradient(circle, rgba(255,255,255,0.04) 0%, transparent 70%);
+    border-radius: 50%;
+    transform: translate(-30%, 30%);
+  }
+
+  .header-inner {
+    position: relative; z-index: 1;
+    max-width: 900px; margin: 0 auto;
+  }
+
+  .header-top {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 24px;
+    flex-wrap: wrap;
+  }
+
+  .nombre-bloque h1 {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: clamp(2rem, 6vw, 3rem);
+    font-weight: 700;
+    letter-spacing: -0.01em;
+    line-height: 1.1;
+    color: #fff;
+  }
+
+  .nombre-bloque .subtitulo {
+    font-size: clamp(0.9rem, 2.5vw, 1.05rem);
+    font-weight: 400;
+    color: rgba(255,255,255,0.72);
+    margin-top: 8px;
+    font-style: italic;
+    font-family: 'Playfair Display', serif;
+  }
+
+  .header-badge {
+    background: rgba(184,147,90,0.18);
+    border: 1px solid rgba(184,147,90,0.45);
+    color: var(--gold-lt);
+    padding: 8px 18px;
+    border-radius: 4px;
+    font-size: 0.78rem;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    white-space: nowrap;
+    flex-shrink: 0;
+  }
+
+  .divider-gold {
+    width: 56px; height: 3px;
+    background: linear-gradient(90deg, var(--gold), var(--gold-lt));
+    margin: 20px 0;
+    border-radius: 2px;
+  }
+
+  .contacto-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px 28px;
+    margin-top: 4px;
+  }
+
+  .contacto-item {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+    font-size: 0.85rem;
+    color: rgba(255,255,255,0.75);
+    font-weight: 400;
+  }
+
+  .contacto-item .ico {
+    font-size: 0.9rem;
+    opacity: 0.85;
+  }
+
+  /* ── BODY LAYOUT ── */
+  .cv-body {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 0 20px 60px;
+  }
+
+  .cv-grid {
+    display: grid;
+    grid-template-columns: 1fr 300px;
+    gap: 0;
+    background: var(--white);
+    box-shadow: 0 4px 40px rgba(0,0,0,0.08);
+  }
+
+  .cv-main {
+    padding: 40px 40px 40px 40px;
+    border-right: 1px solid var(--border);
+  }
+
+  .cv-aside {
+    padding: 40px 28px;
+    background: var(--light);
+  }
+
+  /* ── SECTION TITLES ── */
+  .sec-title {
+    font-family: 'Inter', sans-serif;
+    font-size: 0.7rem;
+    font-weight: 700;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--navy);
+    padding-bottom: 8px;
+    border-bottom: 2px solid var(--gold);
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .sec-title::before {
+    content: '';
+    width: 5px; height: 5px;
+    border-radius: 50%;
+    background: var(--gold);
+    flex-shrink: 0;
+  }
+
+  /* ── PERFIL ── */
+  .perfil-text {
+    font-size: 0.95rem;
+    color: #2a2a3e;
+    line-height: 1.8;
+    text-align: justify;
+  }
+
+  .perfil-text strong {
+    color: var(--navy);
+    font-weight: 600;
+  }
+
+  /* ── EXPERIENCIA ── */
+  .seccion { margin-top: 36px; }
+
+  .empleo {
+    padding: 20px 0;
+    border-bottom: 1px solid var(--border);
+    position: relative;
+  }
+
+  .empleo:last-child { border-bottom: none; }
+
+  .empleo::before {
+    content: '';
+    position: absolute;
+    left: -40px; top: 26px;
+    width: 8px; height: 8px;
+    border-radius: 50%;
+    background: var(--gold);
+    border: 2px solid var(--white);
+    box-shadow: 0 0 0 2px var(--gold);
+  }
+
+  .empleo-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 12px;
+    flex-wrap: wrap;
+    margin-bottom: 3px;
+  }
+
+  .empleo-titulo {
+    font-size: 0.98rem;
+    font-weight: 700;
+    color: var(--navy);
+    line-height: 1.3;
+  }
+
+  .empleo-fecha {
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: var(--gold);
+    background: rgba(184,147,90,0.1);
+    padding: 3px 10px;
+    border-radius: 100px;
+    white-space: nowrap;
+    flex-shrink: 0;
+    margin-top: 2px;
+  }
+
+  .empleo-org {
+    font-size: 0.88rem;
+    color: var(--muted);
+    font-style: italic;
+    margin-bottom: 10px;
+  }
+
+  ul.logros {
+    padding-left: 16px;
+    margin: 0;
+  }
+
+  ul.logros li {
+    font-size: 0.87rem;
+    color: #3a3a4e;
+    margin-bottom: 5px;
+    line-height: 1.6;
+  }
+
+  ul.logros li::marker { color: var(--gold); }
+
+  /* ── ASIDE: FORMACION ── */
+  .aside-sec { margin-top: 28px; }
+  .aside-sec:first-child { margin-top: 0; }
+
+  .aside-sec .sec-title { font-size: 0.65rem; }
+
+  .form-item {
+    margin-bottom: 16px;
+    padding-bottom: 14px;
+    border-bottom: 1px solid var(--border);
+  }
+  .form-item:last-child { border-bottom: none; margin-bottom: 0; padding-bottom: 0; }
+
+  .form-titulo {
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: var(--navy);
+    line-height: 1.35;
+  }
+
+  .form-inst {
+    font-size: 0.78rem;
+    color: var(--muted);
+    margin-top: 2px;
+  }
+
+  /* ── LOGROS ── */
+  ul.logros-aside {
+    padding-left: 16px;
+    margin: 0;
+  }
+
+  ul.logros-aside li {
+    font-size: 0.82rem;
+    color: #3a3a4e;
+    margin-bottom: 9px;
+    line-height: 1.55;
+  }
+
+  ul.logros-aside li::marker { color: var(--gold); }
+
+  /* ── COMPETENCIAS ── */
+  .chips {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 7px;
+  }
+
+  .chip {
+    background: var(--white);
+    border: 1px solid var(--border);
+    color: var(--navy);
+    font-size: 0.72rem;
+    font-weight: 600;
+    padding: 5px 11px;
+    border-radius: 4px;
+    letter-spacing: 0.02em;
+    transition: border-color 0.2s;
+  }
+
+  /* ── IDIOMAS ── */
+  .idioma-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 0.84rem;
+    margin-bottom: 8px;
+  }
+
+  .idioma-label { font-weight: 500; color: var(--navy); }
+  .idioma-nivel { font-size: 0.75rem; color: var(--muted); }
+
+  .idioma-bar {
+    height: 3px;
+    background: var(--border);
+    border-radius: 2px;
+    margin-top: 4px;
+    margin-bottom: 12px;
+    overflow: hidden;
+  }
+
+  .idioma-bar-fill {
+    height: 100%;
+    background: linear-gradient(90deg, var(--gold), var(--gold-lt));
+    border-radius: 2px;
+  }
+
+  /* ── REFERENCIAS ── */
+  .ref-item {
+    margin-bottom: 14px;
+    padding: 12px 14px;
+    background: var(--white);
+    border-left: 3px solid var(--gold);
+    border-radius: 0 4px 4px 0;
+  }
+
+  .ref-item:last-child { margin-bottom: 0; }
+
+  .ref-nombre {
+    font-size: 0.85rem;
+    font-weight: 700;
+    color: var(--navy);
+  }
+
+  .ref-cargo {
+    font-size: 0.77rem;
+    color: var(--muted);
+    margin-top: 2px;
+  }
+
+  /* ── PRINT ── */
+  @media print {
+    body { background: #fff; }
+    .cv-grid { box-shadow: none; }
+    .empleo { break-inside: avoid; }
+    .form-item { break-inside: avoid; }
+    h2.sec-title { break-after: avoid; }
+  }
+
+  /* ── MOBILE ── */
+  @media (max-width: 700px) {
+    .cv-header { padding: 40px 24px 36px; }
+
+    .header-top { flex-direction: column; gap: 16px; }
+    .header-badge { align-self: flex-start; }
+
+    .cv-body { padding: 0 0 40px; }
+
+    .cv-grid {
+      grid-template-columns: 1fr;
+      box-shadow: none;
+    }
+
+    .cv-main {
+      padding: 28px 24px;
+      border-right: none;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .empleo::before { display: none; }
+
+    .cv-aside { padding: 28px 24px; }
+
+    .empleo-header { flex-direction: column; gap: 6px; }
+  }
+</style>
+</head>
+<body>
+
+<!-- HEADER -->
+<div class="cv-header">
+  <div class="header-inner">
+    <div class="header-top">
+      <div class="nombre-bloque">
+        <h1>Jaime Criales Henao</h1>
+        <p class="subtitulo">Ingeniero · Magíster · Líder en Gobierno Digital e Innovación Urbana</p>
+      </div>
+      <div class="header-badge">Perfil Ejecutivo</div>
+    </div>
+    <div class="divider-gold"></div>
+    <div class="contacto-grid">
+      <span class="contacto-item"><span class="ico">📍</span> Barranquilla, Colombia</span>
+      <span class="contacto-item"><span class="ico">📞</span> +57 312 635-6117</span>
+      <span class="contacto-item"><span class="ico">✉️</span> jaimecriales@gmail.com</span>
+      <span class="contacto-item"><span class="ico">🔗</span> linkedin.com/in/jaimecriales</span>
+    </div>
+  </div>
+</div>
+
+<!-- BODY -->
+<div class="cv-body">
+  <div class="cv-grid">
+
+    <!-- MAIN -->
+    <main class="cv-main">
+
+      <div class="sec-title">Perfil Ejecutivo</div>
+      <p class="perfil-text">
+        Líder tecnológico con más de <strong>18 años transformando ciudades y entidades del Estado colombiano</strong>
+        mediante gobierno digital, omnicanalidad e infraestructura inteligente. Ha dirigido iniciativas TIC
+        en Barranquilla, Bogotá, Cundinamarca, Bolívar, Atlántico, Boyacá y en el exterior (Argentina,
+        Puerto Rico). Gerente TIC del Distrito de Barranquilla (2021–2023), llevó la ciudad a la final del
+        <strong>Smart City Expo World Congress 2023</strong> en Barcelona, con experiencia en creación de
+        normativa de TI, creador de iniciativas de aprendizaje tecnológico con impacto en más de
+        <strong>160.000 niños</strong>, y arquitecto de infraestructuras de conexión gratuita con más de
+        <strong>5.000.000 de conexiones</strong>.
+      </p>
+
+      <!-- EXPERIENCIA -->
+      <div class="seccion">
+        <div class="sec-title">Experiencia Relevante</div>
+
+        <div class="empleo">
+          <div class="empleo-header">
+            <span class="empleo-titulo">Gerente TIC del Distrito</span>
+            <span class="empleo-fecha">2021 – 2023</span>
+          </div>
+          <div class="empleo-org">Alcaldía de Barranquilla</div>
+          <ul class="logros">
+            <li>Finalista categoría City Award, Smart City Expo World Congress, Barcelona 2023.</li>
+            <li>Diseño e implementación de plataformas Ciudadano Único, Oferta Única y vacunación COVID-19.</li>
+            <li>Dirección tecnológica Asamblea BID 2021. Miembro comité pandemia COVID-19 2020–2022.</li>
+            <li>Decreto de regulación del cableado aéreo y nueva política de protección de datos personales del Distrito.</li>
+          </ul>
+        </div>
+
+        <div class="empleo">
+          <div class="empleo-header">
+            <span class="empleo-titulo">Docente de Especialización</span>
+            <span class="empleo-fecha">2026</span>
+          </div>
+          <div class="empleo-org">Institución Universitaria de Barranquilla (IUB)</div>
+          <ul class="logros">
+            <li>Docente en programa de especialización, área de tecnologías de la información y gobierno digital.</li>
+          </ul>
+        </div>
+
+        <div class="empleo">
+          <div class="empleo-header">
+            <span class="empleo-titulo">Asesor Omnicanalidad</span>
+            <span class="empleo-fecha">2025</span>
+          </div>
+          <div class="empleo-org">VADATI S.A.S.</div>
+          <ul class="logros">
+            <li>Estructuración de estrategia omnicanal en Gobernaciones de Cundinamarca, Boyacá, Atlántico y Bolívar, y Alcaldías de Barranquilla y Santa Marta.</li>
+          </ul>
+        </div>
+
+        <div class="empleo">
+          <div class="empleo-header">
+            <span class="empleo-titulo">CEO &amp; Fundador</span>
+            <span class="empleo-fecha">2024 – presente</span>
+          </div>
+          <div class="empleo-org">GRIALTECH S.A.S.</div>
+          <ul class="logros">
+            <li>Fundación y dirección de empresa tecnológica especializada en ética digital, protección de datos y productos de nueva generación.</li>
+            <li>Desarrollo de los productos Confía (verificación laboral) y GeoDataVoice (inteligencia territorial).</li>
+          </ul>
+        </div>
+
+        <div class="empleo">
+          <div class="empleo-header">
+            <span class="empleo-titulo">Director Implementación Semaforización Inteligente</span>
+            <span class="empleo-fecha">2018 – 2020</span>
+          </div>
+          <div class="empleo-org">Secretaría de Movilidad — Bogotá D.C.</div>
+          <ul class="logros">
+            <li>Modernización integral del Sistema de Semaforización Inteligente (SSI) de la capital.</li>
+          </ul>
+        </div>
+
+        <div class="empleo">
+          <div class="empleo-header">
+            <span class="empleo-titulo">Director de Tecnologías</span>
+            <span class="empleo-fecha">2017 – 2018</span>
+          </div>
+          <div class="empleo-org">Juegos Centroamericanos y del Caribe — Barranquilla 2018</div>
+          <ul class="logros">
+            <li>Diseño e implementación de la infraestructura tecnológica completa para los Juegos Barranquilla 2018.</li>
+          </ul>
+        </div>
+
+        <div class="empleo">
+          <div class="empleo-header">
+            <span class="empleo-titulo">Director Técnico — Ciberseguridad</span>
+            <span class="empleo-fecha">2015 – 2016</span>
+          </div>
+          <div class="empleo-org">Área Metropolitana de San Juan, Puerto Rico</div>
+          <ul class="logros">
+            <li>Sistema de detección de infracciones y ciberseguridad para tránsito y orden público.</li>
+          </ul>
+        </div>
+
+        <div class="empleo">
+          <div class="empleo-header">
+            <span class="empleo-titulo">Controller Técnico</span>
+            <span class="empleo-fecha">2012 – 2014</span>
+          </div>
+          <div class="empleo-org">Gobierno de la Ciudad de Buenos Aires, Argentina</div>
+          <ul class="logros">
+            <li>Modernización de semaforización y alumbrado público METROBUS (Zonas 6 y 9).</li>
+            <li>Primera ciudad en Suramérica en implementar iluminación pública inteligente a escala.</li>
+          </ul>
+        </div>
+
+        <div class="empleo">
+          <div class="empleo-header">
+            <span class="empleo-titulo">Director Técnico — Fiscalización Electrónica</span>
+            <span class="empleo-fecha">2008 – 2010</span>
+          </div>
+          <div class="empleo-org">Distrito de Barranquilla</div>
+          <ul class="logros">
+            <li>Diseño e implementación del Sistema de Fiscalización Electrónica del Distrito.</li>
+            <li>Diseño del sistema CCTV para TRANSMETRO y semaforización para transporte masivo.</li>
+          </ul>
+        </div>
+
+        <div class="empleo">
+          <div class="empleo-header">
+            <span class="empleo-titulo">Asesor — Fiscalización y Movilidad</span>
+            <span class="empleo-fecha">2011</span>
+          </div>
+          <div class="empleo-org">Valledupar &amp; Departamento del Atlántico</div>
+          <ul class="logros">
+            <li>Modernización del sistema de semaforización y diseño del sistema de fiscalización electrónica de Valledupar.</li>
+            <li>Centralización inalámbrica de la Central de Semáforos.</li>
+            <li>Interventoría técnica, administrativa y financiera en el Dpto. del Atlántico.</li>
+          </ul>
+        </div>
+
+      </div>
+    </main>
+
+    <!-- ASIDE -->
+    <aside class="cv-aside">
+
+      <div class="aside-sec">
+        <div class="sec-title">Formación Académica</div>
+        <div class="form-item">
+          <div class="form-titulo">Magíster en Gobierno de Tecnología Informática</div>
+          <div class="form-inst">Universidad del Norte · 2026</div>
+        </div>
+        <div class="form-item">
+          <div class="form-titulo">Esp. Gerencia de Tecnologías de la Información</div>
+          <div class="form-inst">Universidad del Norte · 2025</div>
+        </div>
+        <div class="form-item">
+          <div class="form-titulo">Esp. Sistemas de Telecomunicaciones</div>
+          <div class="form-inst">Universidad del Norte · 2008</div>
+        </div>
+        <div class="form-item">
+          <div class="form-titulo">Ing. Electrónico y Telecomunicaciones</div>
+          <div class="form-inst">Fund. Univ. San Martín · 2005</div>
+        </div>
+        <div class="form-item">
+          <div class="form-titulo">Cadete de la Armada Nacional</div>
+          <div class="form-inst">Escuela Naval de Cadetes Almirante Padilla · 1998–1999</div>
+        </div>
+      </div>
+
+      <div class="aside-sec">
+        <div class="sec-title">Logros Clave</div>
+        <ul class="logros-aside">
+          <li>Finalista Smart City Expo World Congress — Barcelona 2023.</li>
+          <li>Director TIC, Asamblea Anual BID 2021.</li>
+          <li>Estrategia +60 COVID-19 para más de 500.000 adultos mayores.</li>
+          <li>Omnicanalidad implementada en 6 entidades territoriales.</li>
+          <li>Proyectos internacionales en Argentina y Puerto Rico.</li>
+          <li>Centros de Aprendizaje TI: más de 160.000 beneficiarios.</li>
+          <li>Red de internet gratuito: más de 5.000.000 de conexiones.</li>
+        </ul>
+      </div>
+
+      <div class="aside-sec">
+        <div class="sec-title">Competencias</div>
+        <div class="chips">
+          <span class="chip">Gobierno Digital</span>
+          <span class="chip">Smart Cities</span>
+          <span class="chip">Omnicanalidad</span>
+          <span class="chip">Ciberseguridad</span>
+          <span class="chip">Movilidad Inteligente</span>
+          <span class="chip">IoT</span>
+          <span class="chip">Gobernanza TI</span>
+          <span class="chip">Analítica Pública</span>
+          <span class="chip">Liderazgo Estratégico</span>
+          <span class="chip">Normativa TIC</span>
+        </div>
+      </div>
+
+      <div class="aside-sec">
+        <div class="sec-title">Idiomas</div>
+        <div class="idioma-row">
+          <span class="idioma-label">Español</span>
+          <span class="idioma-nivel">Nativo</span>
+        </div>
+        <div class="idioma-bar"><div class="idioma-bar-fill" style="width:100%"></div></div>
+        <div class="idioma-row">
+          <span class="idioma-label">Inglés</span>
+          <span class="idioma-nivel">Nivel B2</span>
+        </div>
+        <div class="idioma-bar"><div class="idioma-bar-fill" style="width:72%"></div></div>
+      </div>
+
+      <div class="aside-sec">
+        <div class="sec-title">Referencias</div>
+        <div class="ref-item">
+          <div class="ref-nombre">Jaime Pumarejo Heins</div>
+          <div class="ref-cargo">Ex Alcalde de Barranquilla · 2020–2023</div>
+        </div>
+        <div class="ref-item">
+          <div class="ref-nombre">Diana Celis</div>
+          <div class="ref-cargo">Alta Consejera TIC, Bogotá D.C.</div>
+        </div>
+        <div class="ref-item">
+          <div class="ref-nombre">Fabián Hernández</div>
+          <div class="ref-cargo">Ex CEO Telefónica Movistar Colombia</div>
+        </div>
+      </div>
+
+    </aside>
+
+  </div>
+</div>
+
+</body>
+</html>
